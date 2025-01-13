@@ -190,18 +190,20 @@
       {/if}
 
     <!-- History Section -->
-    <div class="rounded-lg border bg-card text-card-foreground shadow-sm bg-white p-6 mt-8">
-  <h2 class="text-2xl font-semibold leading-none tracking-tight mb-4">{gameOver ? 'Final' : ''} Hole-by-Hole</h2>
-  <div class="space-y-3">
-      <div class="grid gap-4">
-          {#each [...holeHistory].reverse() as hole}
+    {#if holeHistory.length > 0}
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm bg-white p-6 mt-8">
+        <h2 class="text-2xl font-semibold leading-none tracking-tight mb-4">{gameOver ? 'Final' : ''} Hole-by-Hole</h2>
+        <div class="space-y-3">
+          <div class="grid gap-4">
+            {#each [...holeHistory].reverse() as hole}
               <div class="grid grid-cols-3 items-center hover:bg-gray-50 p-2 rounded-md">
-                  <span class="font-semibold">Hole {hole.holeNumber}</span>
-                  <span class="text-gray-600">{hole.result === 'Halved' ? 'Halved' : `Team ${hole.result} won`}</span>
-                  <span class="text-gray-600">{hole.scoreboard}</span>
+                <span class="font-semibold">Hole {hole.holeNumber}</span>
+                <span class="text-gray-600">{hole.result === 'Halved' ? 'Halved' : `Team ${hole.result} won`}</span>
+                <span class="text-gray-600">{hole.scoreboard}</span>
               </div>
-          {/each}
+            {/each}
+          </div>
+        </div>
       </div>
-  </div>
-</div>
+    {/if}
   </div>
