@@ -161,7 +161,7 @@
 <div class="max-w-2xl mx-auto space-y-8">
 	<!-- Header -->
 	<header class="text-center">
-		<h1 class="text-4xl font-bold tracking-tight mb-12">Auto Press Scoring</h1>
+		<h1 class="text-4xl font-bold tracking-tight mb-4 sm:mb-8">Auto Press Scoring</h1>
 	</header>
 
 	{#if gameOver}
