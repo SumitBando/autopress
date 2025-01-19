@@ -183,12 +183,12 @@
 				<button
 					on:click={onClick}
 					disabled={gameOver}
-					class="inline-flex mx-2 items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background {variant ===
-					'a'
+					class="inline-flex mx-2 items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-10 px-4 py-2
+					{variant === 'a'
 						? 'bg-blue-500 text-white hover:bg-blue-600'
 						: variant === 'b'
 							? 'bg-green-500 text-white hover:bg-green-600'
-							: 'bg-yellow-400 text-gray-900 hover:bg-yellow-600'} h-10 px-4 py-2"
+							: 'bg-yellow-400 text-gray-900 hover:bg-yellow-600'}"
 				>
 					{label}
 				</button>
