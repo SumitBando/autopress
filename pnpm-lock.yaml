@@ -14,6 +14,9 @@ importers:
       '@tsconfig/svelte':
         specifier: ^5.0.4
         version: 5.0.4
+      '@types/serviceworker':
+        specifier: ^0.0.119
+        version: 0.0.119
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.20(postcss@8.4.49)
@@ -361,6 +364,9 @@ packages:
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
+
+  '@types/serviceworker@0.0.119':
+    resolution: {integrity: sha512-Y6m+CoJ4wbdDRvzb0d3dvHT/ZFUAZilqnMvrUh3eZcUC+wsPfbB4zFuwJL/0gJZCEWEpoZy8ymEhEOhISLtOeA==}
 
   acorn-typescript@1.4.13:
     resolution: {integrity: sha512-xsc9Xv0xlVfwp2o7sQ+GCQ1PgbkdcpWdTzrwXxO3xDMTAywVS3oXVOcOHuRjAPkS4P9b+yc/qNF15460v+jp4Q==}
@@ -1192,6 +1198,8 @@ snapshots:
   '@tsconfig/svelte@5.0.4': {}
 
   '@types/estree@1.0.6': {}
+
+  '@types/serviceworker@0.0.119': {}
 
   acorn-typescript@1.4.13(acorn@8.14.0):
     dependencies:

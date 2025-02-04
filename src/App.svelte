@@ -1,5 +1,9 @@
-<script lang="ts">
+<script context="module" lang="ts">
 	import './app.css'
+	import Installer from './Installer.svelte'
+</script>
+
+<script lang="ts">
 
 	// Define the possible teams
 	type Team = 'A' | 'B'
@@ -164,6 +168,8 @@
 		<h1 class="text-4xl font-bold tracking-tight mb-4 sm:mb-8">Auto Press Scoring</h1>
 	</header>
 
+	<Installer />
+
 	{#if gameOver}
 		<div class="text-center">
 			<h2 class="text-2xl font-semibold text-gray-700 mb-3">Game Over</h2>
@@ -201,25 +207,39 @@
 
 	<!-- History Section -->
 	{#if holeHistory.length > 0}
-		<div class="rounded-lg border bg-card text-card-foreground shadow-sm bg-white p-2 sm:p-6 mt-2 sm:mt-8">
+		<div
+			class="rounded-lg border bg-card text-card-foreground shadow-sm bg-white p-2 sm:p-6 mt-2 sm:mt-8"
+		>
 			<h2 class="text-2xl font-semibold leading-none tracking-tight mb-4">
 				{gameOver ? 'Final' : ''} Hole-by-Hole
 			</h2>
 			<div class="space-y-3">
 				<div class="grid gap-4">
 					{#each [...holeHistory].reverse() as hole}
-						<div class="grid grid-cols-[35%_1fr] gap-2 sm:gap-4 items-center hover:bg-gray-200 sm:p-2 rounded-md">
-							<span class="{
-								hole.result === 'Halved' ? 'bg-yellow-300' :
-								hole.result === 'A' ? 'bg-blue-300' : 'bg-green-300'
-							} px-2 py-1 rounded">
+						<div
+							class="grid grid-cols-[35%_1fr] gap-2 sm:gap-4 items-center hover:bg-gray-200 sm:p-2 rounded-md"
+						>
+							<span
+								class="{hole.result === 'Halved'
+									? 'bg-yellow-300'
+									: hole.result === 'A'
+										? 'bg-blue-300'
+										: 'bg-green-300'} px-2 py-1 rounded"
+							>
 								#{hole.holeNumber} - {hole.result === 'Halved' ? 'Halved' : `Team ${hole.result}`}
 							</span>
-							<span class="font-mono">{@html hole.scoreboard.split(' ').map(score => {
-								if (score.includes('A')) return `<span class="bg-blue-300 px-1 rounded">${score}</span>`;
-								if (score.includes('B')) return `<span class="bg-green-300 px-1 rounded">${score}</span>`;
-								return score;
-							}).join(' ')}</span>
+							<span class="font-mono"
+								>{@html hole.scoreboard
+									.split(' ')
+									.map(score => {
+										if (score.includes('A'))
+											return `<span class="bg-blue-300 px-1 rounded">${score}</span>`
+										if (score.includes('B'))
+											return `<span class="bg-green-300 px-1 rounded">${score}</span>`
+										return score
+									})
+									.join(' ')}</span
+							>
 						</div>
 					{/each}
 				</div>
