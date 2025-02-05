@@ -12,5 +12,5 @@
 </script>
 
 {#await versionPromise then version}
-	<div class="mt-4 text-slate-400 text-center">Build date: {version?.buildDate.split('T')[0]} githash: {version?.commitHash}</div>
+	<div class="mt-4 text-slate-400 text-center">Build date: {version?.buildDate.split('T')[0]} githash: {version?.commitHash.slice(0,7)}</div>
 {/await}
