@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
 	import './app.css'
-	import Installer from './Installer.svelte'
+	// import Installer from './Installer.svelte'
+	import ShowVersion from './ShowVersion.svelte'
 </script>
 
 <script lang="ts">
@@ -168,7 +169,7 @@
 		<h1 class="text-4xl font-bold tracking-tight mb-4 sm:mb-8">Auto Press Scoring</h1>
 	</header>
 
-	<Installer />
+	<!-- <Installer /> -->
 
 	{#if gameOver}
 		<div class="text-center">
@@ -246,4 +247,5 @@
 			</div>
 		</div>
 	{/if}
+	<ShowVersion />
 </div>
