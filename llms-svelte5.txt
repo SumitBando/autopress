@@ -1,5 +1,6 @@
 <SYSTEM>This is the developer documentation for Svelte.</SYSTEM>
 
+This document is hosted at : https://svelte.dev/llms-full.txt
 
 # Overview
 
